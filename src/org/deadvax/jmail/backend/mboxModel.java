@@ -45,7 +45,7 @@ public class mboxModel extends AbstractTableModel {
             case 0:
                 return mbox.getMsg(row).getSender();
             case 1:
-                return mbox.getMsg(row).getTitle();
+                return mbox.getMsg(row).getSubject();
             case 2:
                 return mbox.getMsg(row).getDate();
             default:

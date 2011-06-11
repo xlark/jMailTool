@@ -248,18 +248,14 @@ public class JMailView extends FrameView {
             JFileChooser chooser = new JFileChooser();
             chooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
             if(chooser.showOpenDialog(JMailApp.getApplication().getMainFrame()) == JFileChooser.APPROVE_OPTION)
-                import_file = chooser.getSelectedFile().getAbsolutePath();
-            chooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
-            if(chooser.showOpenDialog(JMailApp.getApplication().getMainFrame()) == JFileChooser.APPROVE_OPTION)
-                export_path = chooser.getSelectedFile().getAbsolutePath() + "/";  
-            
+                import_file = chooser.getSelectedFile().getAbsolutePath();              
         }
         
         @Override protected MBox doInBackground() {
             // Your Task's code here.  This method runs
             // on a background thread, so don't reference
             // the Swing GUI from here.
-            return MBox.importMbox(import_file, export_path);  // return your result
+            return MBox.importMbox(import_file);  // return your result
         }
         @Override protected void succeeded(MBox result) {
             // Runs on the EDT.  Update the GUI based on
