@@ -28,6 +28,11 @@ public class mboxModel extends AbstractTableModel {
         this.mbox = mbox;
         fireTableStructureChanged();
     }
+    
+    public MBox getMBox() {
+        return mbox;
+    }
+    
     public String getColumnName(int col) {
         return colNames[col].toString();
     }

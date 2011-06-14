@@ -120,4 +120,8 @@ public class MBox {
     public MailMessage getMsg(int i) {
         return msgs.get(i);
     }
+    
+    public void sort() {
+        Collections.sort(msgs);
+    }
 }
